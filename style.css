@@ -1,0 +1,314 @@
+html {
+  font-size: 10px;
+  background: url("./AlbedoBase_XL_a_music_concert_using_drums_3.jpg") bottom
+    center;
+  background-size: cover;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+  font-family: sans-serif;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center vertically */
+  padding: 1rem;
+  height: 100vh; /* Make sure content fits within the screen */
+  overflow: hidden; /* Remove scrollbars */
+}
+
+/* Keys Layout - Dynamic Grid */
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 0 2rem; /* Add horizontal padding to prevent overflow */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.key {
+  border: 0.4rem solid white;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  transition: all 0.07s ease;
+  text-align: center;
+  color: white;
+  background: rgba(177, 160, 160, 0.4);
+  text-shadow: 0 0 0.5rem black;
+  flex: 1 0 20%; /* Default to take 20% of available width */
+  min-width: 7rem; /* Minimum size */
+  max-width: 10rem; /* Maximum size */
+  height: 7rem;
+}
+.highlight-key {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+
+kbd {
+  display: block;
+  font-size: 3rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ffc600;
+}
+
+/* Lesson Section Styling */
+.lesson-container {
+  margin: 2rem 0;
+  text-align: center;
+  color: #ffc600;
+  width: 100%;
+}
+
+.lesson-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#lesson-select {
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid #ffc600;
+  color: #1e1f26;
+  width: 60%; /* Make the lesson select width responsive */
+}
+
+.lesson-display {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 50px;
+  padding: 2rem;
+  background-color: beige;
+  font-size: 2.8rem;
+  color: #333;
+  width: 100%;
+  max-width: 400px; /* Limit maximum width */
+  min-height: 100px; /* Add a minimum height */
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease; /* Smooth transition for responsive changes */
+}
+
+/* For medium screens (up to 1024px) */
+@media (max-width: 1024px) {
+  .lesson-display {
+    max-width: 350px;
+    min-height: 90px;
+    font-size: 2.5rem;
+  }
+}
+
+/* For small screens (up to 768px) */
+@media (max-width: 768px) {
+  .lesson-display {
+    max-width: 300px;
+    min-height: 80px;
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+/* For extra small devices (up to 480px) */
+@media (max-width: 480px) {
+  .lesson-display {
+    max-width: 250px;
+    min-height: 70px;
+    font-size: 1.6rem;
+    padding: 1rem;
+    border-radius: 30px; /* Slightly smaller border radius */
+  }
+}
+
+/* Controls Styling */
+.controls {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem; /* Add gap between buttons */
+  justify-content: center;
+  width: 100%;
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: rgb(16, 191, 255);
+  border: none;
+  color: #1e1f26;
+  transition: background 0.3s ease;
+  flex: 1; /* Ensure buttons take equal width */
+  max-width: 200px; /* Limit maximum width of buttons */
+}
+
+button:hover {
+  background-color: #e6b800;
+}
+
+/* Media Queries for responsiveness */
+
+/* For large screens (over 1024px) */
+@media (min-width: 1024px) {
+  .keys {
+    justify-content: center;
+  }
+
+  .key {
+    flex: 1 0 20%; /* 5 keys per row */
+    min-width: 8rem; /* Larger minimum size */
+  }
+
+  .lesson-container h2 {
+    font-size: 3rem;
+    .lesson-display {
+      font-size: 3rem;
+    }
+  }
+
+  /* For medium screens (up to 1024px) */
+  @media (max-width: 1024px) {
+    .keys {
+      justify-content: center;
+      padding: 0 1rem;
+    }
+
+    .key {
+      flex: 1 0 25%; /* 4 keys per row */
+      min-width: 7rem;
+      height: 7rem;
+    }
+
+    .lesson-container h2 {
+      font-size: 2.5rem;
+    }
+
+    .lesson-display {
+      font-size: 2.5rem;
+    }
+
+    button {
+      font-size: 1.3rem;
+      padding: 0.6rem;
+    }
+  }
+
+  /* For small screens (up to 768px) */
+  @media (max-width: 768px) {
+    html {
+      font-size: 8px;
+    }
+
+    .keys {
+      width: 90%;
+    }
+
+    .key {
+      width: 6rem; /* Reduce key size */
+      height: 6rem;
+      font-size: 1.4rem;
+    }
+
+    .lesson-container h2 {
+      font-size: 2rem;
+    }
+
+    #lesson-select {
+      font-size: 1.4rem;
+      padding: 0.4rem;
+      width: 80%;
+    }
+
+    .lesson-display {
+      font-size: 2rem;
+      padding: 1.5rem;
+    }
+
+    .controls {
+      flex-direction: column;
+      gap: 0.5rem; /* Ensure gap in column layout */
+    }
+
+    button {
+      width: 80%; /* Make buttons responsive */
+    }
+  }
+
+  /* For extra small devices (up to 480px) */
+  @media (max-width: 480px) {
+    html {
+      font-size: 7px; /* Further reduce font size */
+    }
+
+    .keys {
+      grid-template-columns: repeat(
+        2,
+        1fr
+      ); /* 2 keys per row on small screens */
+      width: 100%;
+    }
+
+    .key {
+      width: 5rem; /* Further reduce key size */
+      height: 5rem;
+      font-size: 1.2rem;
+    }
+
+    .lesson-container h2 {
+      font-size: 1.6rem;
+    }
+
+    #lesson-select {
+      font-size: 1.2rem;
+      padding: 0.3rem;
+      width: 90%;
+    }
+
+    .lesson-display {
+      font-size: 1.6rem;
+      padding: 1rem;
+    }
+
+    .controls {
+      flex-direction: column;
+      gap: 0.5rem; /* Ensure gap in column layout */
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 0.5rem;
+      width: 80%; /* Make buttons responsive */
+    }
+  }
+}
