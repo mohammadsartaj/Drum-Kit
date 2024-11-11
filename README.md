@@ -1,4 +1,4 @@
-Drum Kit Website
+**Drum Kit Website**
 Welcome to the Drum Kit Website! This web application allows users to interact with a virtual drum kit, where each key on the keyboard is mapped to a drum sound. Users can play beats by pressing the corresponding keys, and also choose from a selection of playlists for automated playback.
 
 Features
