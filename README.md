@@ -20,5 +20,6 @@ L: Bass Drum#
 #Automated Play (Play for Me Mode):
   #Select a playlist from the playlist options. The app will automatically play the drum sounds based on the selected rhythm.
 
-![Modern Drum Kit with Lessons - Google Chrome 11_11_2024 1_02_26 PM](https://github.com/user-attachments/assets/2c05fe4e-5194-44ce-ab9b-dce1b49f7394)
 
+
+![Modern Drum Kit with Lessons - Google Chrome 11_11_2024 1_02_26 PM](https://github.com/user-attachments/assets/f023a4a1-a72e-4276-b88e-658e409850fa)
